@@ -1,0 +1,14 @@
+﻿# Trivy scan output
+trivy-report.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment files
+.env
+
+# IDE
+.vscode/
