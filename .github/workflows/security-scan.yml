@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build Docker image
         run: |
@@ -43,7 +43,7 @@ jobs:
 
       - name: Save Trivy report
         if: always() && hashFiles('trivy-results.sarif') != ''
-        uses: actions/upload-artifact@v4
+        uses: uses: actions/upload-artifact@v6
         with:
           name: trivy-security-report
           path: trivy-results.sarif
