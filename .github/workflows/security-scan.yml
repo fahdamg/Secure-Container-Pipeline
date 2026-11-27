@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t secure-container-pipeline:${{ github.sha }} .
+          docker build --no-cache -f Dockerfile.alpine -t secure-container-pipeline:${{ github.sha }} .
 
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@v0.36.0
