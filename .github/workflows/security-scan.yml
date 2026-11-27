@@ -43,7 +43,7 @@ jobs:
 
       - name: Save Trivy report
         if: always() && hashFiles('trivy-results.sarif') != ''
-       uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v6
         with:
           name: trivy-security-report
           path: trivy-results.sarif
